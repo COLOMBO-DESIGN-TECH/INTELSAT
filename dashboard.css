@@ -1,0 +1,406 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.top-bar {
+    background: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-btn {
+    background-color: #f1f1f7;
+    border: none;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.circle-btn {
+    width: 24px;
+    height: 24px;
+    background-color: #f1f1f7;
+    border-radius: 50%;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.dashboard h3 {
+    text-align: center;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #000000;
+    padding: 20px;
+    height: 480px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 30px;
+
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #0e0e0e;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 15px;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.toggle-group label {
+    display: block;
+    margin: 10px 0;
+    background: #333;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.toggle-group input[type="checkbox"] {
+    float: right;
+    transform: scale(1.2);
+}
+
+.battery img {
+    width: 120px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.router-mode-container h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+
+}
+
+.router-card {
+    background-color: #111;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 340px;
+
+}
+
+.router-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.router-option span {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #4cff9b;
+}
+
+input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+.grid-3,
+.grid-4,
+.grid-5 {
+    display: grid;
+    gap: 65px;
+    margin-top: 10px;
+    justify-content: start;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 140px);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 140px);
+}
+
+.grid-5 {
+    grid-template-columns: repeat(5, 140px);
+}
+
+
+.battery-status-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0e0e0e;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    margin-top: 10px;
+    width: 335px;
+    height: 140px;
+
+}
+
+.battery-images {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+}
+
+.battery-block {
+    text-align: center;
+    font-size: 13px;
+}
+
+.battery-block img {
+    width: 125px;
+    margin: 8px 0;
+    padding: 5px;
+
+}
+
+.battery-info {
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: left;
+    position: relative;
+}
+
+/* new */
+#menu-toggle {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.grid-3-mobile-display {
+    display: none;
+}
+
+.battery-info span {
+    display: block;
+    background: white;
+    width: 3px;
+    height: 126px;
+    position: absolute;
+    left: -56px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* styles for tablets and smaller devices */
+@media (max-width: 768px) {
+    .dashboard {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #mobile-sidebar {
+        display: none;
+        position: relative;
+        width: 100%;
+        z-index: 9;
+        margin-left: 0;
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .router-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .battery-status-card {
+        width: 100%;
+        box-sizing: border-box;
+        height: unset;
+    }
+
+    .content {
+        width: 100%;
+        display: block;
+        flex: unset;
+        box-sizing: border-box;
+    }
+
+    #mobile-sidebar.open {
+        display: block;
+    }
+
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .grid-3,
+    .grid-4,
+    .grid-5 {   
+        gap: 0px;
+      
+    }
+
+    .mobile-card-wrapper {
+        padding: 7px;
+    }
+
+    .mobile-card-wrapper .card {
+        gap: 0px;
+        padding: 0;
+    }
+
+    .circle-btn {
+        display: none;
+    }
+
+    .top-right {
+        padding-right: 40px;
+    }
+
+    .grid-3-mobile-display {
+        display: block;
+    }
+
+    .mobile-card-wrapper.mobile-hide {
+        display: none;
+    }
+
+   .content h1 {
+    font-size: 26px;
+   }
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTELSAT Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+
+        <div class="top-right">
+            <button class="account-btn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <!-- Hamburger for mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+        <nav class="sidebar" id="mobile-sidebar">
+            <h3>NAVIGATION</h3>
+            <ul>
+                <li class="active"><a href="dashboard.html">Home</a></li>
+                <li><a href="wifi.html">WiFi Network</a></li>
+                <li><a href="ethernet.html">Ethernet Network</a></li>
+                <li><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </nav>
+
+
+
+        <main class="content">
+            <h1>DASHBOARD OVERVIEW</h1>
+
+            <section class="router-mode-container">
+                <h2>ROUTER MODE</h2>
+                <div class="router-card">
+                    <div class="router-option">
+                        <div>
+                            <strong>Full Router</strong><br />
+                            <span>(Router & Wi-Fi enabled)</span>
+                        </div>
+                        <label class="switch">
+                            <input type="radio" name="routerMode" checked />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="router-option">
+                        <div>
+                            <strong>Wired-Only</strong><br />
+                            <span>(Router enabled, Wi-Fi disabled)</span>
+                        </div>
+                        <label class="switch">
+                            <!-- <input type="radio" name="routerMode" />
+                            <span class="slider round"></span> -->
+                            <input type="radio" name="routerMode" value="wired" id="wiredOnly" />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="router-option">
+                        <div>
+                            <strong>Bypass</strong><br />
+                            <span>(Router off, passthrough enabled)</span>
+                        </div>
+                        <label class="switch">
+                            <input type="radio" name="routerMode" />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>NETWORK STATUS (EXCELLENT)</h2>
+                <div class="grid-3 small-cards">
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>INTERNET</div><strong>EXCELLENT</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>SPEED</div><strong>EXCELLENT</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper mobile-hide">
+                        <div class="card">
+                            <div>LATENCY</div><strong>51 MS</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-3-mobile-display">
+                    <div class="mobile-card-wrapper ">
+                        <div class="card">
+                            <div>LATENCY</div><strong>51 MS</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>WIFI NETWORKS (WIFI ENABLED)</h2>
+
+                <div class="grid-4 small-cards">
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>SSID: NETWORK 1<br>KEY: ABCD123</div><strong>ACTIVE</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>SSID: NETWORK 2<br>KEY: ABCD123</div><strong>ACTIVE</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>SSID: NETWORK 3<br>KEY: ABCD123</div><strong>ACTIVE</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>SSID: NETWORK 4<br>KEY: ABCD123</div><strong>ACTIVE</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONNECTED DEVICES -->
+            <section>
+                <h2>CONNECTED DEVICES (4 DEVICES)</h2>
+                <div class="grid-4 small-cards">
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>Device Name<br>Connection type</div><strong>Wireless</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>Device Name<br>Connection type</div><strong>Wireless</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>Device Name<br>Connection type</div><strong>Wireless</strong>
+                        </div>
+                    </div>
+                    <div class="mobile-card-wrapper">
+                        <div class="card">
+                            <div>Device Name<br>Connection type</div><strong>Wireless</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>BATTERY & CHARGING STATUS</h2>
+                <div class="battery-status-card">
+                    <div class="battery-images">
+                        <div class="battery-block">
+                            <!-- <div><strong>Module 1</strong></div> -->
+                            <img src="./assets/battery.png" alt="Module 1" />
+                            <!-- <div>100%<br>60°F</div> -->
+                        </div>
+
+                    </div>
+                    <div class="battery-info">
+                        <span></span>
+                        <strong>Battery Level</strong><br>
+                        Module 1: 100%<br>
+                        Module 2: 50%<br><br>
+                        <strong>Usage Left</strong><br>
+                        50 Hours<br><br>
+                        <strong>Status</strong><br>
+                        Charging
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Get all router mode radio buttons
+        const routerRadios = document.querySelectorAll('input[name="routerMode"]');
+
+        routerRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                if (this.value === 'wired') {
+                    // Navigate to wired.html when Wired-Only is selected
+                    window.location.href = 'wired.html';
+                }
+            });
+        });
+
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("show-sidebar");
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            console.log("Hamburger clicked");
+            mobileSidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

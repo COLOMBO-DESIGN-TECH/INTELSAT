@@ -1,0 +1,164 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #2f2f2f;
+}
+
+/* Header */
+.header {
+  background-color: #111;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.header-text {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Main container */
+.login-container {
+  min-height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Login box */
+.login-box {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Branding section */
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.login-title {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Form */
+.login-form {
+  width: 100%;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-form input::placeholder {
+  font-style: italic;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #7fbf30;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #6aa428;
+}
+
+/* Forgot Password Button */
+.forgot-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.forgot-btn {
+  background-color: #555;
+  color: white;
+  font-size: 12px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forgot-btn:hover {
+  background-color: #777;
+}
+
+/* Back to Login Button */
+.back-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #777;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .login-title {
+    font-size: 20px;
+  }
+
+  .login-logo {
+    width: 100px;
+  }
+
+  .header-text {
+    font-size: 16px;
+  }
+}

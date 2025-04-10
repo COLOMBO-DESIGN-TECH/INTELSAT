@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logs & Diagnostics - INTELSAT</title>
+  <link rel="stylesheet" href="logs-diagnostics.css" />
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="left-logo">
+      <img src="./assets/logo white.png" alt="Logo" class="logo" />
+      <span class="logo-text">INTELSAT</span>
+    </div>
+    <div class="top-right">
+      <button class="account-btn">STARLINK</button>
+      <div class="circle-btn"></div>
+    </div>
+  </header>
+
+  <div class="dashboard">
+    <!-- Hamburger for mobile -->
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <aside class="sidebar" id="mobile-sidebar">
+      <h3>NAVIGATION</h3>
+      <ul>
+        <li><a href="dashboard.html">Home</a></li>
+        <li><a href="wifi.html">WiFi Network</a></li>
+        <li><a href="ethernet.html">Ethernet Network</a></li>
+        <li><a href="device-management.html">Device Management</a></li>
+        <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+        <li><a href="security-firewall.html">Security & Firewall</a></li>
+        <li><a href="charging-power.html">Charging & Power Management</a></li>
+        <li class="active"><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+        <li><a href="advanced.html">Advanced</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1>Logs & Diagnostics</h1>
+
+      <div class="tab-buttons">
+        <a href="logs-diagnostics.html"><button>System</button></a>
+        <a href="security-diagnostics.html"><button>Security</button></a>
+        <a href="connection-diagnostics.html"><button class="active-tab">Connection</button></a>
+      </div>
+
+
+      <h3>SYSTEM LOGS</h3>
+      <table class="logs-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Type</th>
+            <th>Level</th>
+            <th>Log Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2025-01-01 00:00:00</td>
+            <td>NAT</td>
+            <td>INFO</td>
+            <td>DHCPC DHCP Service Unavailable, recv no OFFER</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2025-01-01 00:00:00</td>
+            <td>NAT</td>
+            <td>INFO</td>
+            <td>DHCPC DHCP Service Unavailable, recv no OFFER</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>2025-01-01 00:00:00</td>
+            <td>NAT</td>
+            <td>INFO</td>
+            <td>DHCPC DHCP Service Unavailable, recv no OFFER</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>2025-01-01 00:00:00</td>
+            <td>NAT</td>
+            <td>INFO</td>
+            <td>DHCPC DHCP Service Unavailable, recv no OFFER</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>2025-01-01 00:00:00</td>
+            <td>NAT</td>
+            <td>INFO</td>
+            <td>DHCPC DHCP Service Unavailable, recv no OFFER</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector(".sidebar").classList.toggle("show-sidebar");
+    }
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      console.log("Hamburger clicked");
+      mobileSidebar.classList.toggle('open');
+    });
+  </script>
+
+</body>
+
+</html>

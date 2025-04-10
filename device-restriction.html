@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Device Management - INTELSAT</title>
+    <link rel="stylesheet" href="device-management.css" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+        <div class="top-right">
+            <button class="account-btn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <!-- Hamburger for mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+        <aside class="sidebar" id="mobile-sidebar">
+            <h3>NAVIGATION</h3>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="wifi.html">WiFi Network</a></li>
+                <li><a href="ethernet.html">Ethernet Network</a></li>
+                <li class="active"><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="device-header">
+                <h1>Device Management</h1>
+                <div class="tab-buttons">
+                    <button onclick="location.href='device-management.html'">Connected Devices</button>
+                    <button class="active-tab">Restricted Devices</button>
+                </div>
+            </div>
+
+
+            <div class="device-grid-header">
+                <h3>PRIORITIZE DEVICES (3 SELECTED)</h3>
+            </div>
+
+
+            <div class="device-grid">
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+
+                <div class="device-card small-card ">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card ">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="delete-btnr" onclick="location.href='device-restricted.html'">Unrestrict</button>
+                <button class="cancel-btn" onclick="location.href='device-restricted.html'">Cancel</button>
+            </div><br><br>
+
+            <div class="parental-controls-wrapper">
+                <h3>RESTRICTIONS</h3>
+
+                <div class="parental-controls-form">
+
+                    <div class="form-row">
+                        <label>Restriction Type</label>
+                        <div class="days">
+                            <label><input type="checkbox" checked /> Blacklist</label>
+                            <label><input type="checkbox" /> Whitelist</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Keyword or Website</label>
+                        <input type="text" value="Using DHCP" />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Add Keyword or Website</label>
+                        <div class="add-schedule">
+                            <input type="text" placeholder="" />
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="form-row center">
+                        <button class="create-btn">Create</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("show-sidebar");
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            console.log("Hamburger clicked");
+            mobileSidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

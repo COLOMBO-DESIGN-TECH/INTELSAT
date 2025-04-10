@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WiFi Band Testing</title>
+    <link rel="stylesheet" href="wifi-status.css" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+        <div class="top-right">
+            <button class="account-btn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <nav class="sidebar">
+            <h2>NAVIGATION</h2>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li class="active"><a href="wifi.html">WiFi Network</a></li>
+                <li><a href="ethernet.html">Ethernet Network</a></li>
+                <li><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>WiFi Network</h1>
+
+            <div class="tab-buttons">
+                <button onclick="window.location.href='wifi.html'">WiFi Networks</button>
+                <button class="active-tab">WiFi Settings</button>
+            </div>
+
+            <section class="wifi-status-section">
+                <h3>WiFi Band Testing</h3>
+
+                <div class="status-card">
+                    <div class="status-header">
+                        <p><strong>Now testing on 2.4 GHz.</strong><br>Signal strength and speed results will appear
+                            below.</p>
+                        <div class="checkmark" style="background-color: #ff4d4d; color: white;">!</div>
+                    </div>
+                    <div class="status-info">
+                        <p><strong>Current Band:</strong> 2.4 GHz</p>
+                        <p><strong>Signal Strength RSSI:</strong> -XX dBm</p>
+                        <p><strong>Channel Utilization:</strong> XX%</p>
+                        <p><strong>Latency Check Ping:</strong> XX ms</p>
+                        <p><strong>Download/Upload Speed:</strong> XX Mbps / XX Mbps</p>
+                        <p><strong>Component Type:</strong> Status cards or live text display</p>
+                    </div>
+                </div>
+
+                <div class="wifi-settings-container">
+                    <div class="settings-card">
+                        <p>
+                            Test the performance of your router by switching between Wi-Fi frequency bands.
+                            Select a band below to evaluate signal strength and performance.
+                        </p>
+
+                        <div class="radio-group">
+                            <span>Restriction Type</span>
+                            <label><input type="radio" name="band" value="2.4GHz" /> 2.4 GHz</label>
+                            <label><input type="radio" name="band" value="5GHz" /> 5 GHz</label>
+                        </div>
+
+                        <div class="button-row">
+                            <button class="stop-btn">Stop</button>
+                            <button class="test-btn" onclick="location.href='wifi-switch.html'">Test</button>
+                        </div>
+
+                        <select class="channel-select">
+                            <option>Advanced: Select a specific WiFi Channel</option>
+                            <option>Channel 1</option>
+                            <option>Channel 6</option>
+                            <option>Channel 11</option>
+                        </select>
+
+                        <button class="apply-btn" onclick="location.href='wifi-switch.html'">Apply</button>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

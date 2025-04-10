@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Device Management - INTELSAT</title>
+    <link rel="stylesheet" href="device-management.css" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+        <div class="top-right">
+            <button class="account-btn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+                <!-- Hamburger for mobile -->
+                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+                <aside class="sidebar" id="mobile-sidebar">
+            <h3>NAVIGATION</h3>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="wifi.html">WiFi Network</a></li>
+                <li><a href="ethernet.html">Ethernet Network</a></li>
+                <li class="active"><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="device-header">
+                <h1>Device Management</h1>
+                <div class="tab-buttons">
+                    <button class="active-tab" onclick="location.href='device-management.html'">Connected Devices</button>
+                    <button onclick="location.href='device-restricted.html'">Restricted Devices</button>
+                </div>
+            </div>
+
+
+            <div class="device-grid-header">
+                <h3>PRIORITIZE DEVICES (5 SELECTED)</h3>
+            </div>
+
+
+            <div class="device-grid">
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        5GHz Wireless
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        2.4GHz Wireless
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+                <div class="device-card small-card green-border">
+                    <div class="device-info">
+                        <strong>Device Name</strong><br />
+                        Connection type<br />
+                        Wired
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="delete-btnr" onclick="location.href='device-management.html'">Delete</button>
+                <button class="cancel-btn" onclick="location.href='device-management.html'">Cancel</button>
+            </div><br><br>
+
+
+            <div class="parental-controls-wrapper">
+                <h3>PARENTAL CONTROLS</h3>
+                <div class="parental-controls-form">
+                    <div class="form-row">
+                        <label>Status</label>
+                        <label class="switch">
+                            <input type="checkbox" checked />
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Configure</label>
+                        <input type="text" value="Using DHCP" />
+                    </div>
+                    <div class="form-row">
+                        <label>IP Address</label>
+                        <input type="text" value="192.168.1.101" />
+                    </div>
+
+                    <div class="form-row">
+                        <label>Schedule</label>
+                        <div class="schedule-inputs">
+                            <input type="time" value="09:00" />
+                            <input type="time" value="18:00" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Days</label>
+                        <div class="days">
+                            <label><input type="checkbox" checked /> Sunday</label>
+                            <label><input type="checkbox" checked /> Monday</label>
+                            <label><input type="checkbox" checked /> Tuesday</label>
+                            <label><input type="checkbox" checked /> Wednesday</label>
+                            <label><input type="checkbox" checked /> Thursday</label>
+                            <label><input type="checkbox" checked /> Friday</label>
+                            <label><input type="checkbox" /> Saturday</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label>Add Schedule</label>
+                        <div class="add-schedule">
+                            <input type="text" placeholder="Add Schedule" />
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="form-row center">
+                        <button class="create-btn">Create</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("show-sidebar");
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            console.log("Hamburger clicked");
+            mobileSidebar.classList.toggle('open');
+        });
+    </script>
+    
+</body>
+
+</html>

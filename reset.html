@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password - INTELSAT</title>
+    <link rel="stylesheet" href="reset.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="./assets/logo white.png" alt="Intelsat Logo" class="header-logo">
+        <span class="header-text">INTELSAT</span>
+    </header>
+
+    <main class="login-container">
+        <div class="login-box">
+            <div class="branding">
+                <img src="./assets/logo.png" alt="Intelsat Logo" class="login-logo" />
+                <h1 class="login-title">INTELSAT</h1>
+            </div>
+
+            <form class="login-form" onsubmit="return resetPassword(event)">
+                <input type="email" placeholder="Enter Your Email" required />
+
+                <button type="button" class="back-btn" onclick="window.location.href='index.html'">
+                    Back To Login
+                </button>
+
+                <button type="submit" class="login-btn">Reset Password</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function resetPassword(event) {
+            event.preventDefault();
+            // No alert shown — just redirect
+            window.location.href = "index.html"; // Redirect to login page
+        }
+    </script>
+</body>
+
+</html>

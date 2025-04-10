@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethernet Network - INTELSAT</title>
+    <link rel="stylesheet" href="ethernet.css" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+        <div class="top-right">
+            <button class="account-btn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <!-- Hamburger for mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav class="sidebar" id="mobile-sidebar">
+            <h3>NAVIGATION</h3>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="wifi.html">WiFi Network</a></li>
+                <li class="active"><a href="ethernet.html">Ethernet Network</a></li>
+                <li><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>ETHERNET NETWORK</h1>
+            <h4 class="sub-title">ETHERNET PORT CONFIGURATION</h4>
+
+            <div class="ethernet-form">
+                <div class="form-row">
+                    <label>Connect using</label>
+                    <select>
+                        <option>Ethernet</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Configure</label>
+                    <input type="text" placeholder="Using DHCP" />
+                </div>
+
+                <div class="form-row">
+                    
+                    <label>IP Address</label>
+                    <select>
+                        <option>192.168.1.101</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Subnet Mask</label>
+                    <select>
+                        <option>255.255.255.0</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>Router Address</label>
+                    <input type="text" placeholder="192.168.1.1" />
+                </div>
+
+                <div class="form-row">
+                    <label>DNS Servers</label>
+                    <input type="text" />
+                </div>
+
+                <div class="form-row">
+                    <label class="invisible-label">&nbsp;</label>
+                    <input type="text" />
+                </div>
+
+                <div class="form-row">
+                    <label>Domain Name</label>
+                    <input type="text" />
+                </div>
+
+                <div class="form-row">
+                    <label>DHCP Client ID</label>
+                    <input type="text" />
+                </div>
+
+                <div class="form-row">
+                    <label>WAN Ethernet Speed</label>
+                    <select>
+                        <option>Automatic (Default)</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label>PoE Control</label>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <button class="apply-btn">Apply</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("show-sidebar");
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            console.log("Hamburger clicked");
+            mobileSidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+
+</html>

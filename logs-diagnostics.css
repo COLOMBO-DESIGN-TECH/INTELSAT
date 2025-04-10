@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.top-bar {
+    background: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-btn {
+    background-color: #f1f1f7;
+    border: none;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.circle-btn {
+    width: 24px;
+    height: 24px;
+    background-color: #f1f1f7;
+    border-radius: 50%;
+}
+
+
+.dashboard {
+    display: flex;
+}
+
+.dashboard h3 {
+    text-align: center;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #000000;
+    padding: 20px;
+    height: 480px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    padding: 8px 16px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.tab-buttons .active-tab {
+    background-color: #00ff94;
+    color: black;
+    font-weight: bold;
+}
+
+
+.logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .logs-table th,
+  .logs-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  
+  .logs-table th {
+    background-color: #111;
+  }
+  
+  .logs-table tbody tr:hover {
+    background-color: #222;
+  }
+
+/* new */
+#menu-toggle {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+.main-content h3{
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #mobile-sidebar {
+        display: none;
+        position: relative;
+        width: 100%;
+        z-index: 9;
+        margin-left: 0;
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .content {
+        width: 100%;
+        display: block;
+        flex: unset;
+        box-sizing: border-box;
+    }
+
+    #mobile-sidebar.open {
+        display: block;
+    }
+
+    .circle-btn {
+        display: none;
+    }
+
+    .top-right {
+        padding-right: 40px;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .tab-buttons button {
+        flex: 1;
+        min-width: 160px;
+        text-align: center;
+        padding: 12px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+    .tab-buttons .active-tab {
+        background-color: #00f38d;
+        color: black;
+    }
+    .main-content {
+        padding: 16px;
+        text-align: left; /* Ensure text isn't centered */
+      }
+    
+      .logs-table {
+        margin: 0; /* Reset any center margins */
+        width: 100%;
+      }
+    
+      .logs-table th,
+      .logs-table td {
+        text-align: left;
+        padding: 12px 10px;
+      }
+      
+
+    }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WiFi Network - INTELSAT</title>
+    <link rel="stylesheet" href="wifi.css">
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+        <div class="top-right">
+            <button class="account-btn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <nav class="sidebar">
+            <h3>NAVIGATION</h3>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li class="active"><a href="wifi.html">WiFi Network</a></li>
+                <li><a href="ethernet.html">Ethernet Network</a></li>
+                <li><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>WiFi Network</h1>
+
+            <div class="tab-buttons">
+                <button class="active-tab">WiFi Networks</button>
+                <button onclick="window.location.href='wifi-settings.html'">WiFi Settings</button>
+            </div>
+
+            <div class="wifi-header">
+                <span class="wifi-title">WiFi Network</span>
+                <span class="edit-label">DONE</span>
+            </div>
+
+            <section class="wifi-grid">
+                <a href="wifi.html" style="text-decoration: none; color: inherit;">
+                    <div class="card">
+                        SSID: NETWORK 1<br>KEY: ABCD123<br><strong>ACTIVE</strong>
+                    </div>
+                </a>
+                <div class="card">SSID: NETWORK 2<br>KEY: ABCD123<br><strong>ACTIVE</strong></div>
+                <div class="card">SSID: NETWORK 3<br>KEY: ABCD123<br><strong>ACTIVE</strong></div>
+                <div class="card" style="border: 2px solid #00f38d;">SSID: NETWORK 4<br>KEY:
+                    ABCD123<br><strong>ACTIVE</strong></div>
+            </section>
+
+            <h2>Create SSID</h2>
+            <form class="create-ssid-form">
+                <div class="form-row">
+                    <label for="ssid">Network Name (SSID)</label>
+                    <input id="ssid" type="text" placeholder="NETWORK 4" />
+                </div>
+
+                <div class="form-row">
+                    <label for="band">WiFi Band Control</label>
+                    <select id="band">
+                        <option>2.4 GHz</option>
+                        <option>5 GHz</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="security">Security Options</label>
+                    <select id="security">
+                        <option>WPA2</option>
+                        <option>WPA3</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Password/Key</label>
+                    <input id="password" type="password" placeholder="Test123!" />
+                </div>
+
+                <div class="form-row">
+                    <label for="signal">Signal Strength</label>
+                    <input id="signal" type="text" placeholder="Value" />
+                </div>
+
+                <div class="form-row toggle-row">
+                    <label>SSID Broadcast</label>
+                    <label class="switch">
+                        <input type="checkbox" checked />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="form-row toggle-row">
+                    <label>Guest Network Control</label>
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="form-row button-row">
+                    <button type="submit" class="create-btn" style="background-color: #e74c3c;">Delete</button>
+                    <button type="submit" class="create-btn">Apply</button>
+                </div>
+
+            </form>
+        </main>
+    </div>
+
+    <script src="wifi.js"></script>
+</body>
+
+</html>
