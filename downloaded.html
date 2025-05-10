@@ -55,16 +55,38 @@
 
             <h3>Firmware Update</h3>
 
+
             <div class="firmware-card">
                 <div class="firmware-header">
-                    <button class="gray-btn" onclick="window.location.href='download-history.html'">Firmware History</button>
+                    <button class="gray-btn">Firmware History</button>
                 </div>
 
                 <p><strong>Current Router Firmware Version</strong><br />V1.0.0.4.2</p>
 
                 <div class="firmware-check">
-                    <p><strong>Check for new firmware version</strong></p>
-                    <button class="blue-btn" onclick="window.location.href='downloaded.html'">Check for Updates</button>
+                    <p><strong>New Version Found - Update Available!</strong><br>V1.0.0.5.0</p>
+
+                    <!-- Progress bars -->
+                    <button class="blue-btn" id="startUpdateBtn">Download and Install</button>
+
+                    <!-- Progress Bars -->
+                    <div class="progress-bar" id="bar-download" style="display: none;">
+                        <div class="progress-fill" id="fill-download">Downloaded... 0%</div>
+                    </div>
+
+                    <div class="progress-bar" id="bar-verify" style="display: none;">
+                        <div class="progress-fill" id="fill-verify">Verifying... 0%</div>
+                    </div>
+
+                    <div class="progress-bar" id="bar-install" style="display: none;">
+                        <div class="progress-fill" id="fill-install">Installing... 0%</div>
+                    </div>
+
+                    <div class="progress-bar" id="bar-reboot" style="display: none;">
+                        <div class="progress-fill" id="fill-reboot">Rebooting... 0%</div>
+                    </div>
+
+                    <p>System will reboot after firmware upgrade completes.</p>
                 </div>
 
                 <div class="firmware-upload">
@@ -72,6 +94,7 @@
                     <div class="upload-row">
                         <!-- <input type="text" placeholder="Choose file" /> -->
                         <input type="text" id="fileInput" placeholder="Choose file" />
+
                         <button class="blue-btn" onclick="window.location.href='browse.html'">Browse</button>
                     </div>
                 </div>
@@ -91,27 +114,51 @@
             </div>
 
             <script>
-                function toggleSidebar() {
-                    document.querySelector(".sidebar").classList.toggle("show-sidebar");
+
+                function animateProgress(fillId, label, duration, callback) {
+                    const fill = document.getElementById(fillId);
+                    let progress = 0;
+                    const interval = setInterval(() => {
+                        progress += 1;
+                        fill.style.width = `${progress}%`;
+                        fill.textContent = `${label} ${progress}%`;
+                        if (progress >= 100) {
+                            clearInterval(interval);
+                            if (callback) callback();
+                        }
+                    }, duration / 100);
                 }
-                const toggleButton = document.getElementById('menu-toggle');
-                const mobileSidebar = document.getElementById('mobile-sidebar');
 
-                toggleButton.addEventListener('click', () => {
-                    console.log("Hamburger clicked");
-                    mobileSidebar.classList.toggle('open');
-                });
+                document.getElementById('startUpdateBtn').addEventListener('click', () => {
+                    document.getElementById('startUpdateBtn').style.display = 'none';
 
-                // Load file name from sessionStorage
+                    document.getElementById('bar-download').style.display = 'block';
+                    animateProgress('fill-download', 'Downloaded...', 2000, () => {
+                        document.getElementById('bar-verify').style.display = 'block';
+                        animateProgress('fill-verify', 'Verifying...', 2000, () => {
+                            document.getElementById('bar-install').style.display = 'block';
+                            animateProgress('fill-install', 'Installing...', 2000, () => {
+                                document.getElementById('bar-reboot').style.display = 'block';
+                                animateProgress('fill-reboot', 'Rebooting...', 2000, () => {
+
+                                    setTimeout(() => {
+                                        window.location.href = 'noupdates.html';
+                                    }, 2000);
+
+                                });
+                            });
+                        });
+                    });
+                })
+
+     
                 window.addEventListener('DOMContentLoaded', () => {
                     const selectedFile = sessionStorage.getItem('selectedFile');
                     if (selectedFile) {
                         document.getElementById('fileInput').value = selectedFile;
-                        sessionStorage.removeItem('selectedFile'); // clear after use
+                        sessionStorage.removeItem('selectedFile'); 
                     }
                 });
-
-
             </script>
 
 

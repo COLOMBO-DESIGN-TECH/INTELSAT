@@ -55,24 +55,28 @@
 
             <h3>Firmware Update</h3>
 
+
             <div class="firmware-card">
                 <div class="firmware-header">
-                    <button class="gray-btn" onclick="window.location.href='download-history.html'">Firmware History</button>
+                    <button class="gray-btn">Firmware History</button>
                 </div>
 
                 <p><strong>Current Router Firmware Version</strong><br />V1.0.0.4.2</p>
 
                 <div class="firmware-check">
-                    <p><strong>Check for new firmware version</strong></p>
-                    <button class="blue-btn" onclick="window.location.href='downloaded.html'">Check for Updates</button>
+                    <p><strong>No Updates Available.</strong><br><br>
+
+                    <button class="blue-btn" id="startUpdateBtn">Check Again</button>
+
+
+                   
                 </div>
 
                 <div class="firmware-upload">
                     <p><strong>Manually locate and select the upgrade file</strong></p>
                     <div class="upload-row">
-                        <!-- <input type="text" placeholder="Choose file" /> -->
-                        <input type="text" id="fileInput" placeholder="Choose file" />
-                        <button class="blue-btn" onclick="window.location.href='browse.html'">Browse</button>
+                        <input type="text" placeholder="Choose file" />
+                        <button class="blue-btn">Browse</button>
                     </div>
                 </div>
 
@@ -91,25 +95,26 @@
             </div>
 
             <script>
-                function toggleSidebar() {
-                    document.querySelector(".sidebar").classList.toggle("show-sidebar");
+
+                function animateProgress(fillId, label, duration, callback) {
+                    const fill = document.getElementById(fillId);
+                    let progress = 0;
+                    const interval = setInterval(() => {
+                        progress += 1;
+                        fill.style.width = `${progress}%`;
+                        fill.textContent = `${label} ${progress}%`;
+                        if (progress >= 100) {
+                            clearInterval(interval);
+                            if (callback) callback();
+                        }
+                    }, duration / 100);
                 }
-                const toggleButton = document.getElementById('menu-toggle');
-                const mobileSidebar = document.getElementById('mobile-sidebar');
 
-                toggleButton.addEventListener('click', () => {
-                    console.log("Hamburger clicked");
-                    mobileSidebar.classList.toggle('open');
-                });
 
-                // Load file name from sessionStorage
-                window.addEventListener('DOMContentLoaded', () => {
-                    const selectedFile = sessionStorage.getItem('selectedFile');
-                    if (selectedFile) {
-                        document.getElementById('fileInput').value = selectedFile;
-                        sessionStorage.removeItem('selectedFile'); // clear after use
-                    }
-                });
+                setTimeout(() => {
+                        window.location.href = 'advanced.html';
+                    }, 2000);
+
 
 
             </script>

@@ -136,22 +136,28 @@ body {
     font-weight: bold;
 }
 
-
 .firmware-card {
     background-color: #0e0e0e;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    width: 650px;
+    width: 100%;
+    max-width: 680px;
     margin-top: 10px;
 }
 
 .firmware-card p {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .firmware-check,
-.firmware-upload {
+.firmware-upload,
+.firmware-bridge {
+    margin-bottom: 20px;
+}
+
+.firmware-header {
     margin-bottom: 20px;
 }
 
@@ -159,7 +165,6 @@ body {
     display: flex;
     gap: 10px;
     margin-top: 8px;
-    width: 380px;
 }
 
 .upload-row input {
@@ -168,12 +173,24 @@ body {
     border: none;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: white;
+}
+
+.input-select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    background-color: white;
 }
 
 .upload-actions {
-    margin-top: 20px;
     display: flex;
+    justify-content: flex-start;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .blue-btn {
@@ -181,9 +198,21 @@ body {
     color: white;
     border: none;
     padding: 10px 18px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    width: 120px;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.blue-btn1 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    min-width: 120px;
 }
 
 .cancel-btn {
@@ -191,9 +220,20 @@ body {
     color: white;
     border: none;
     padding: 10px 18px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    width: 120px;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+.gray-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* cloud-integration.html */
@@ -502,3 +542,95 @@ body {
     }
 
 }
+
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 28px;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 28px;
+    margin: 10px 0;
+  }
+  
+  .progress-fill {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+    height: 100%;
+    transition: width 0.2s ease-in-out;
+  }
+
+  #fill-download { background-color: red; }
+#fill-verify { background-color: red; }
+#fill-install { background-color: yellow; color: black; }
+#fill-reboot { background-color: #66ff99; color: black; }
+
+/* history */
+
+.firmware-history {
+    background: #0e0e0e;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .history-header h2 {
+    margin: 0;
+  }
+  
+  .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .history-list {
+    margin-top: 20px;
+  }
+  
+  .version-block {
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+  }
+  
+  .version-block:last-child {
+    border-bottom: none;
+  }
+  
+  .blue-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+  }

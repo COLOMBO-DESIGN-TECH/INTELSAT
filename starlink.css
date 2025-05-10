@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.top-bar {
+    background: #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 24px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account-btn {
+    background-color: #fff;
+    border: none;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    color: black;
+}
+
+.circle-btn {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.dashboard h3 {
+    text-align: center;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #000000;
+    padding: 20px;
+    height: 480px;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active-tab {
+    background-color: #00f38d;
+    color: black;
+}
+
+
+.test-btn {
+    margin-top: 20px;
+    background-color: #000000;
+    color: #00f38d;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border: 5px solid #00f38d;
+}
+
+.tab-buttons .active-tab {
+    background: #00f38d;
+    color: black;
+}
+
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a {
+    background-color: #00f38d;
+    color: black;
+    font-weight: bold;
+}
+
+/* new */
+#menu-toggle {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.starlink-access {
+    margin-left: 20px;
+    flex: 1;
+}
+
+
+.starlink-access h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.map-section {
+    margin-bottom: 20px;
+}
+
+.map-image {
+    width: 100%;
+    max-width: 460px;
+    border-radius: 10px;
+}
+
+.status-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.status-card {
+    background-color: #0e0e0e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+
+  
+@media (max-width: 768px) {
+    .dashboard {
+        display: block;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #mobile-sidebar {
+        display: none;
+        position: relative;
+        width: 100%;
+        z-index: 9;
+        margin-left: 0;
+        margin-top: 0;
+        box-sizing: border-box;
+    }
+
+    .content {
+        width: 100%;
+        display: block;
+        flex: unset;
+        box-sizing: border-box;
+    }
+
+    #mobile-sidebar.open {
+        display: block;
+    }
+
+    .circle-btn {
+        display: none;
+    }
+
+    .top-right {
+        padding-right: 40px;
+    }
+
+    .dashboard h3 {
+        text-align: left;
+
+    }
+
+    .starlink-access {
+        margin: 20px 16px;
+        padding-top: 20px;
+      }
+    
+      .map-section {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    
+      .map-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+    
+      .status-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    
+      .status-card {
+        flex: 1 1 calc(30% - 16px);
+        max-width: 180px;
+        min-width: 140px;
+        background-color: #0e0e0e;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        text-align: center;
+      }
+    
+      .label {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+}

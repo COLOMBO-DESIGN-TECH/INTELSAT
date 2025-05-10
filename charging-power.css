@@ -141,7 +141,8 @@ body {
     margin-bottom: 30px;
 }
 
-.battery-card {
+.battery-card,
+.battery-card2 {
     background-color: #0e0e0e;
     border-radius: 12px;
     padding: 20px;
@@ -149,6 +150,27 @@ body {
     display: flex;
     gap: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    height: 180px; /* 👈 Ensures equal height */
+    align-items: center;
+}
+
+
+.battery-card img,
+.battery-card2 img {
+  width: 100px;
+  height: auto;
+  margin-left: 30px;
+}
+
+/* .battery-card {
+    background-color: #0e0e0e;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    height: 180px;
 }
 
 .battery-card img {
@@ -158,6 +180,27 @@ body {
     margin-top: 50px;
     margin-left: 30px;
 }
+
+.battery-card2 {
+    background-color: #0e0e0e;
+    border-radius: 12px;
+    padding: 20px;
+    width: 320px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    height: 180px;
+}
+
+.battery-card2 img {
+    width: 130px;
+    height: auto;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: 30px;
+} */
+
+
 
 .usage-chart {
     background-color: #0e0e0e;
@@ -208,7 +251,7 @@ body {
     align-items: center;
     margin: 20px 0;
     font-size: 18px;
-    /* margin-left: 600px; */
+ 
 }
 
 
@@ -270,14 +313,6 @@ input:checked+.slider:before {
     margin-right: 195px;
 }
 
-/* .main-content h3{
-    margin-right: 800px;
-} */
-
-/* updated grids */
-
-
-
 /* new */
 #menu-toggle {
     display: none;
@@ -286,6 +321,72 @@ input:checked+.slider:before {
     top: 10px;
     cursor: pointer;
 }
+
+/* Advanced chargon option CSS New */
+
+
+ .module-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .module-card {
+    background-color: #0e0e0e;
+    border-radius: 12px;
+    padding: 20px;
+    width: 430px;
+    display: flex;
+    gap: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .battery-icon {
+    width: 60px;
+    max-height: 120px;
+    margin-top: 10px;
+  }
+  
+  .module-info {
+    flex: 1;
+    margin-left: 30px;
+  }
+  
+  .module-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+  }
+  
+  .module-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .charge-control {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .charge-control button {
+    padding: 4px 8px;
+    font-size: 14px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .temp-label {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #aaa;
+  }
 
 @media (max-width: 768px) {
     .dashboard {
@@ -362,7 +463,7 @@ input:checked+.slider:before {
         width: 100%;
       }
     
-      .battery-card {
+      /* .battery-card {
         width: 100% !important;
         flex-direction: column;
         align-items: center;
@@ -376,8 +477,8 @@ input:checked+.slider:before {
         width: 100px;
         height: auto;
         margin: 0 auto 16px auto;
-      }
-    
+      } */
+  
       .battery-card p {
         font-size: 14px;
         line-height: 1.5;
@@ -440,5 +541,34 @@ input:checked+.slider:before {
       .slider:before {
         height: 24px;
         width: 24px;
+      }
+
+      /* advanced charging */
+
+      .module-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      
+      .module-info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .module-info-row span {
+        font-size: 15px;
+      }
+      
+      .module-info-row .switch {
+        flex-shrink: 0;
+      }
+
+      .switch {
+        flex-shrink: 0;
+        transform: scale(0.9);
+        width: 60px;
       }
 }

@@ -65,9 +65,82 @@
                     </label>
                 </div>
             </div>
-        </main>
+
+            <!-- <h3>ADVANCED CHARGING OPTIONS</h3>
+<div class="charging-options">
+  <div class="charging-card">
+    <img src="./assets/advanced module1.png" alt="Battery 1">
+    <div class="charging-info">
+      <p><strong>Module 1</strong></p>
+      <p>USB Charging <label class="switch"><input type="checkbox" checked><span class="slider"></span></label></p>
+      <p>Clean Charging <label class="switch"><input type="checkbox" checked><span class="slider"></span></label></p>
+      <p>Charge Rate <button>&lt;</button> 60% <button>&gt;</button></p>
+    </div>
+  </div>
+
+  <div class="charging-card">
+    <img src="./assets/advanced module2.png" alt="Battery 2">
+    <div class="charging-info">
+      <p><strong>Module 2</strong></p>
+      <p>USB Charging <label class="switch"><input type="checkbox" checked><span class="slider"></span></label></p>
+      <p>Clean Charging <label class="switch"><input type="checkbox" checked><span class="slider"></span></label></p>
+      <p>Charge Rate <button>&lt;</button> 100% <button>&gt;</button></p>
+    </div>
+  </div>
+</div>
+    -->
+
+    <h3>ADVANCED CHARGING OPTIONS</h3>
+<div class="module-grid">
+  <div class="module-card">
+    <img src="./assets/advanced module1.png" alt="Battery 1" class="battery-icon" />
+    <div class="module-info">
+      <h4>Module 1</h4>
+      <div class="module-row">
+        <span>USB Charging</span>
+        <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+      </div>
+      <div class="module-row">
+        <span>Clean Charging</span>
+        <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+      </div>
+      <div class="module-row">
+        <span>Charge Rate</span>
+        <div class="charge-control">
+          <button>&lt;</button><span>60%</span><button>&gt;</button>
+        </div>
+      </div>
+      <span class="temp-label">60°F</span>
+    </div>
+  </div>
+
+  <div class="module-card">
+    <img src="./assets/advanced module2.png" alt="Battery 2" class="battery-icon" />
+    <div class="module-info">
+      <h4>Module 2</h4>
+      <div class="module-row">
+        <span>USB Charging</span>
+        <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+      </div>
+      <div class="module-row">
+        <span>Clean Charging</span>
+        <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+      </div>
+      <div class="module-row">
+        <span>Charge Rate</span>
+        <div class="charge-control">
+          <button>&lt;</button><span>100%</span><button>&gt;</button>
+        </div>
+      </div>
+      <span class="temp-label">75°F</span>
+    </div>
+  </div>
+</div>
+
+    </main>
 
     </div>
+
 
     <script>
         function toggleSidebar() {

@@ -21,7 +21,7 @@
     </header>
 
     <div class="dashboard">
-        <!-- Hamburger for mobile -->
+
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
         <aside class="sidebar" id="mobile-sidebar">
@@ -55,23 +55,23 @@
 
             <h3>Firmware Update</h3>
 
+
             <div class="firmware-card">
                 <div class="firmware-header">
-                    <button class="gray-btn" onclick="window.location.href='download-history.html'">Firmware History</button>
+                    <button class="gray-btn">Firmware History</button>
                 </div>
 
                 <p><strong>Current Router Firmware Version</strong><br />V1.0.0.4.2</p>
 
                 <div class="firmware-check">
-                    <p><strong>Check for new firmware version</strong></p>
-                    <button class="blue-btn" onclick="window.location.href='downloaded.html'">Check for Updates</button>
+                    <p><strong>New Version Found - Update Available!</strong><br>V1.0.0.5.0</p>
+                    <button class="blue-btn">Check Again</button>
                 </div>
 
                 <div class="firmware-upload">
                     <p><strong>Manually locate and select the upgrade file</strong></p>
                     <div class="upload-row">
-                        <!-- <input type="text" placeholder="Choose file" /> -->
-                        <input type="text" id="fileInput" placeholder="Choose file" />
+                        <input type="text" placeholder="Choose file" />
                         <button class="blue-btn" onclick="window.location.href='browse.html'">Browse</button>
                     </div>
                 </div>
@@ -102,14 +102,37 @@
                     mobileSidebar.classList.toggle('open');
                 });
 
-                // Load file name from sessionStorage
-                window.addEventListener('DOMContentLoaded', () => {
-                    const selectedFile = sessionStorage.getItem('selectedFile');
-                    if (selectedFile) {
-                        document.getElementById('fileInput').value = selectedFile;
-                        sessionStorage.removeItem('selectedFile'); // clear after use
-                    }
-                });
+                function animateProgress(id, text, colorClass, endPercent, duration, callback) {
+                    const fill = document.querySelector(`#${id} .progress-fill`);
+                    fill.className = `progress-fill ${colorClass}`;
+
+                    let current = 0;
+                    const stepTime = duration / endPercent;
+
+                    const interval = setInterval(() => {
+                        if (current >= endPercent) {
+                            clearInterval(interval);
+                            if (callback) callback();
+                        } else {
+                            current++;
+                            fill.style.width = current + "%";
+                            fill.textContent = `${text}... ${current}%`;
+                        }
+                    }, stepTime);
+                }
+
+                // Trigger the full sequence
+                function startFirmwareUpgrade() {
+                    animateProgress("download-bar", "Downloaded", "red", 100, 3000, () => {
+                        animateProgress("verify-bar", "Verifying", "red", 100, 3000, () => {
+                            animateProgress("install-bar", "Installing", "yellow", 100, 3000, () => {
+                                animateProgress("reboot-bar", "Rebooting", "green", 100, 3000);
+                            });
+                        });
+                    });
+                }
+
+                document.addEventListener("DOMContentLoaded", startFirmwareUpgrade);
 
 
             </script>

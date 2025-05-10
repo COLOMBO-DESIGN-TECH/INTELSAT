@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance & Optimization - INTELSAT</title>
+    <link rel="stylesheet" href="starlink.css" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left-logo">
+            <img src="./assets/logo white.png" alt="Logo" class="logo" />
+            <span class="logo-text">INTELSAT</span>
+        </div>
+        <div class="top-right">
+            <!-- <button class="account-btn">STARLINK</button> -->
+            <button class="account-btn" id="starlinkToggleBtn">STARLINK</button>
+            <div class="circle-btn"></div>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <!-- Hamburger for mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+        <aside class="sidebar" id="mobile-sidebar">
+            <h3>NAVIGATION</h3>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="wifi.html">WiFi Network</a></li>
+                <li><a href="ethernet.html">Ethernet Network</a></li>
+                <li><a href="device-management.html">Device Management</a></li>
+                <li><a href="performance-optimization.html">Performance & Optimization</a></li>
+                <li><a href="security-firewall.html">Security & Firewall</a></li>
+                <li><a href="charging-power.html">Charging & Power Management</a></li>
+                <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </aside>
+
+
+        <section class="starlink-access">
+            <h2>STARLINK ACCESS</h2>
+
+            <div class="map-section">
+                <img src="./assets/starink.png" alt="Map" class="map-image" />
+            </div>
+
+            <div class="status-grid">
+                <div class="status-card">
+                    <p class="label">SATELLITE VISIBILITY</p>
+                    <p>8:00 PM NNE<br>9:30 PM NE<br>11:15 PM NE</p>
+                </div>
+                <div class="status-card">
+                    <p class="label">NETWORK STATUS</p>
+                    <p>GREAT</p>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("show-sidebar");
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            console.log("Hamburger clicked");
+            mobileSidebar.classList.toggle('open');
+        });
+
+
+        const starlinkBtn = document.getElementById('starlinkToggleBtn');
+
+        starlinkBtn.addEventListener('click', () => {
+            if (starlinkBtn.textContent === 'STARLINK') {
+                starlinkBtn.textContent = 'BACK';
+            } else {
+                starlinkBtn.textContent = 'STARLINK';
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
