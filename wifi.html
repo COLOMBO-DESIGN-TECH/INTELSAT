@@ -63,6 +63,7 @@
       </section>
 
       <h2>Create SSID</h2>
+
       <form class="create-ssid-form">
         <div class="form-row">
           <label for="ssid">Network Name (SSID)</label>
@@ -91,11 +92,11 @@
         </div>
 
         <div class="form-row">
-          <label for="signal">Signal Strength</label>
+          <label for="signal">Confirm Password</label>
           <input id="signal" type="text" placeholder="Value" />
         </div>
 
-        <div class="form-row toggle-row">
+        <!-- <div class="form-row toggle-row">
           <label>SSID Broadcast</label>
           <label class="switch">
             <input type="checkbox" checked />
@@ -109,14 +110,34 @@
             <input type="checkbox" />
             <span class="slider"></span>
           </label>
-        </div>
+        </div> -->
 
         <div class="form-row button-row">
           <button type="submit" class="create-btn">Create</button>
         </div>
+        
       </form>
+
+      <div class="band-change-card">
+        <h3>Change WiFi Band</h3>
+        <p>Select the WiFi frequency band to apply system-wide:</p>
+
+        <div class="band-options">
+          <label>
+            <input type="radio" name="band" value="2.4" checked> 2.4 GHz
+          </label>
+          <label>
+            <input type="radio" name="band" value="5"> 5 GHz
+          </label>
+        </div>
+
+        <button class="apply-band-btn">Apply Band</button>
+      </div>
+
     </main>
   </div>
+
+
 
   <script>
     function toggleSidebar() {

@@ -129,6 +129,15 @@ body {
   color: black;
 }
 
+#menu-toggle {
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  cursor: pointer;
+}
+
+
 /* END */
 
 /* new updated firewall */
@@ -357,16 +366,6 @@ input:checked+.switch-slider:before {
   width: 543px;
 }
 
-
-
-/* new */
-#menu-toggle {
-  display: none;
-  position: absolute;
-  right: 16px;
-  top: 10px;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   .dashboard {
