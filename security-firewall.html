@@ -21,10 +21,10 @@
     </header>
 
     <div class="dashboard">
-                <!-- Hamburger for mobile -->
-                <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <!-- Hamburger for mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-                <aside class="sidebar" id="mobile-sidebar">
+        <aside class="sidebar" id="mobile-sidebar">
             <h3>NAVIGATION</h3>
             <ul>
                 <li><a href="dashboard.html">Home</a></li>
@@ -50,43 +50,48 @@
             <h4>GENERAL FIREWALL SETTINGS</h4>
 
             <div class="firewall-card">
-                <div class="firewall-switches">
-                    <div class="switch-item">
-                        <label class="switch-label">Firewall</label>
+                <div class="firewall-row-top">
+                    <div class="fwsetting">
+                        <label class="input-label">Enable Firewall</label>
                         <label class="switch">
                             <input type="checkbox" checked />
-                            <span class="slider"></span>
+                            <span class="switch-slider"></span>
                         </label>
                     </div>
 
-                    <div class="switch-item">
-                        <label class="switch-label">DoS Protection</label>
-                        <label class="switch">
-                            <input type="checkbox" checked />
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-
-                    <div class="switch-item">
-                        <label class="switch-label">Respond ICMP Echo (Ping)<br />Request from WAN</label>
-                        <label class="switch">
-                            <input type="checkbox" checked />
-                            <span class="slider"></span>
-                        </label>
+                    <div class="fwsetting">
+                        <label class="input-label">Default Policy (Incoming Traffic)</label>
+                        <select class="dropdown-input">
+                            <option>Deny All</option>
+                            <option>Allow All</option>
+                        </select>
                     </div>
                 </div>
 
-                <div class="dropdown-row">
-                    <!-- <label for="logType">Logged Packets Type</label> -->
-                    <label class="switch-label">Logged Packets Type</label>
-                    <select id="logType">
-                        <option>None</option>
-                        <option>Accepted</option>
-                        <option>Dropped</option>
-                        <option>All</option>
-                    </select>
+                <div class="form-row">
+                    <label class="input-label">Whitelist MAC Address</label>
+                    <div class="input-group">
+                        <input type="text" placeholder="e.g. AA:BB:CC:DD:EE:FF" />
+                        <button class="gray-btn">+ ADD MAC Address</button>
+                    </div>
                 </div>
+
+                <div class="form-row">
+                    <label class="input-label">Whitelist Port</label>
+                    <div class="input-group">
+                        <input type="text" placeholder="e.g. 22" />
+                        <button class="gray-btn">+ ADD Port</button>
+                    </div>
+                </div>
+
+                <div class="applybtn">
+                    <button class="apply-btn">Apply Settings</button>
+                </div>
+                
             </div>
+
+
+            <!-- end -->
 
             <h4>GENERAL FIREWALL SETTINGS</h4>
             <div class="firewall-rules-card">
@@ -134,7 +139,10 @@
 
 
                 <button class="add-rule">+</button>
-                <button class="apply-btn">Apply</button>
+                <div class="applybtn">
+                    <button class="apply-btn">Apply</button>
+                </div>
+                
             </div>
         </main>
     </div>
