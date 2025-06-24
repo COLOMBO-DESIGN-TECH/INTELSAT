@@ -426,32 +426,32 @@ input:checked+.slider:before {
 
 @media (max-width: 768px) {
   .dashboard {
-      display: block;
+    display: block;
   }
 
   #menu-toggle {
-      display: block;
+    display: block;
   }
 
   #mobile-sidebar {
-      display: none;
-      position: relative;
-      width: 100%;
-      z-index: 9;
-      margin-left: 0;
-      margin-top: 0;
-      box-sizing: border-box;
+    display: none;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+    margin-left: 0;
+    margin-top: 0;
+    box-sizing: border-box;
   }
 
   .content {
-      width: 100%;
-      display: block;
-      flex: unset;
-      box-sizing: border-box;
+    width: 100%;
+    display: block;
+    flex: unset;
+    box-sizing: border-box;
   }
 
   #mobile-sidebar.open {
-      display: block;
+    display: block;
   }
 
   .circle-btn {

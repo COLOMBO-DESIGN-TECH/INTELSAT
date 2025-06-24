@@ -21,10 +21,9 @@
     </header>
 
     <div class="dashboard">
-               <!-- Hamburger for mobile -->
-               <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-               <aside class="sidebar" id="mobile-sidebar">
+        <!-- Hamburger for mobile -->
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <nav class="sidebar" id="mobile-sidebar">
             <h3>NAVIGATION</h3>
             <ul>
                 <li><a href="dashboard.html">Home</a></li>
@@ -37,7 +36,7 @@
                 <li><a href="logs-diagnostics.html">Logs & Diagnostics</a></li>
                 <li><a href="advanced.html">Advanced</a></li>
             </ul>
-        </aside>
+        </nav>
 
         <main class="main-content">
             <div class="device-header">
@@ -115,6 +114,22 @@
 
         </main>
     </div>
+
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector(".sidebar").classList.toggle("show-sidebar");
+        }
+        const toggleButton = document.getElementById('menu-toggle');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+
+        toggleButton.addEventListener('click', () => {
+            console.log("Hamburger clicked");
+            mobileSidebar.classList.toggle('open');
+        });
+    </script>
+
+
 </body>
 
 </html>
